@@ -1,10 +1,9 @@
 function curl_argv() {
   URL="https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag="$@
-  curl -s "$URL"
+  curl -s "$URL" | python -c "import json,sys;obj=json.load(sys.stdin);print obj['data']['image_original_url'];"
 }
 
 function parse_json() {
-  python -c "import json,sys;obj=json.load(sys.stdin);print obj['data']['image_original_url'];"
 }
 
 function display_gif() {
@@ -13,4 +12,4 @@ function display_gif() {
   rm .download.gif
 }
 
-curl_argv $@ | parse_json | display_gif
+curl_argv $@ | display_gif
