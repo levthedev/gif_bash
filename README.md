@@ -1,9 +1,9 @@
 # gifs in iTerm
 
 ## usage
-copy and paste the function in gif.sh into your `.bash_profile` (located at `~/.bash_profile`)
+copy and paste the function in `gif.sh` into your `.bash_profile` (located at `~/.bash_profile`)
 
-next, install imgcat-cli by running `npm install -g imgcat-cli`
+next, install `imgcat-cli` by running `npm install -g imgcat-cli`
 
 now either restart your terminal, or run `source ~/.bash_profile`
 
